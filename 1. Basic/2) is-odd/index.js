@@ -1,6 +1,7 @@
 function isOdd(a) {
-  //Напиши свой код здесь
+    return a % 2 == 0;
 }
+console.log(isOdd(7));
 
 window.isOdd = isOdd;
 
