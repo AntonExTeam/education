@@ -1,7 +1,8 @@
 function sum(a, b) {
-  //Напиши свой код здесь
+    return a + b;
 };
 
+console.log(sum(15, 89));
 window.sum = sum;
 
 export default sum;
