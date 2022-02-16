@@ -11,7 +11,6 @@ function factorial(n) {
     }
 }
 
-console.log(factorial(7))
 
 window.factorial = factorial;
 
