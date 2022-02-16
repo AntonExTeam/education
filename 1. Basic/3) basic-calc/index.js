@@ -13,11 +13,6 @@ function basicCalc(operation, a, b) {
     }
 }
 
-console.log(basicCalc('+', 4, 5));
-console.log(basicCalc('-', 4, 5));
-console.log(basicCalc('/', 7, 5));
-console.log(basicCalc('*', 78, 34));
-
 window.basicCalc = basicCalc;
 
 export default basicCalc;
