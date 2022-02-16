@@ -6,9 +6,7 @@ function fullSum(args) {
         if (typeof arguments[i] !== 'number') {
             throw new TypeError("Wrong Argument Type");
         }
-        else {
-            sum += arguments[i];
-        }
+        sum += arguments[i];
     }
     return sum;
 }
