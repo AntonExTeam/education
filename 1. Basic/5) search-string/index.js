@@ -6,20 +6,15 @@ function searchString(obj) {
         return "";
     }
 
-    let err = false;
-
     let strFromArray = keysFromObject.reduce(function(arr, item){
         if (obj[item] == null || obj[item] === '') {
             return arr;
         }
         arr.push(item + '=' + (obj[item]));
         return arr;
-
     }, []);
 
-
     return '?' + strFromArray.join('&');
-
 }
 
 window.searchString = searchString;
