@@ -1,16 +1,23 @@
 function searchString(obj) {
 
-    let keysFromObject = Object.keys(obj);
+  let keysFromObject = Object.keys(obj);
 
     if (keysFromObject.length === 0) {
         return "";
     }
 
-    let strFromArray = keysFromObject.reduce(function(arr, item){
-        if (obj[item] == null || obj[item] === '') {
-            return arr;
+    /*let arr = [];
+    for (let i = 0; i < keysFromObject.length; i++) {
+        if (obj[keysFromObject[i]] != null && obj[keysFromObject[i]] !== '') {
+            arr.push(keysFromObject[i] + '=' + obj[keysFromObject[i]]);
         }
-        arr.push(item + '=' + (obj[item]));
+
+    }*/
+
+    let strFromArray = keysFromObject.reduce(function(arr, item){
+        if (obj[item] != null && obj[item] !== '') {
+            arr.push(item + '=' + (obj[item]));
+        }
         return arr;
     }, []);
 
