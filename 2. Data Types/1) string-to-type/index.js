@@ -17,7 +17,7 @@ function stringToType(str) {
     if (str === "") {
         return str;
     }
-    if (str === Number(str)) {
+    if (str == Number(str)) {
         return Number(str);
     }
         return str;
