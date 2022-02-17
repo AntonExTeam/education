@@ -1,19 +1,16 @@
-import {stringToType} from "../../2. Data Types/1) string-to-type/index.js"
+const {stringToType} = require("../../2. Data Types/1) string-to-type/index")
 
 function queryToObject(query) {
 
-    let searchParams = new URLSearchParams(query);
-    let arrParams = searchParams.entries();
+    let arrParams = query.replace('?', '').split('&');
+    let result = {};
 
-    function paramsToObject(entries) {
-        let result = {}
-        for (let [key, value] of entries) {
-            result[key] = stringToType(value);
-        }
-        return result;
-    }
+    arrParams.forEach(function(item) {
+        let [key, value] = item.split('=');
+        result[key] = stringToType(value);
+    });
 
-    return paramsToObject(arrParams);
+    return result;
 };
 
 window.queryToObject = queryToObject;
