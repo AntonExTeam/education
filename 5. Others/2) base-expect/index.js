@@ -7,9 +7,17 @@
   baseExpect(5).toBe.not(5) === false
   Примечание: Должно работать только с числами
  */
-
 function baseExpect(a) {
-  // Напиши свой код здесь
+
+    let toBe = b => {
+        return a === b;
+    }
+
+    toBe.not = b => {
+        return a !== b;
+     }
+
+     return { toBe };
 }
 
 window.baseExpect = baseExpect;
