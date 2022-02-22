@@ -14,15 +14,7 @@
 
 function isValidEmail(email) {
 
-  let regexp = /\w+\d+\@\w+\.\w+/gi;
-  let regexp2 = /\w+\@\w+\.\w+/gi;
-
-  for (let i = 0; i < email.length; i++) {
-      if(typeof email[i] === 'number') {
-          return regexp.test(email);
-      }
-      return regexp2.test(email);
-  }
+    return /@gmail.com$/.test(email);
 }
 
 window.isValidEmail = isValidEmail;
